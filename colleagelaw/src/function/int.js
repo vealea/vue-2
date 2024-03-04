@@ -1,0 +1,10 @@
+const intonly = {
+    mounted(el) {
+      el.addEventListener('input', (event) => {
+        const value = event.target.value;
+        event.target.value = value.replace(/\D/g, ''); // 只保留数字
+      });
+    },
+  };
+  
+  export default intonly;
