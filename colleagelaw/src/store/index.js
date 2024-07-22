@@ -8,7 +8,7 @@ export default new Vuex.Store({
     networkSuccess: true //是否断网
   },
   mutations: {
-    changeNetworkSuccess(state,val){ //改变状态
+    changeNetworkSuccess(state, val) { //改变状态
       state.networkSuccess = val
     }
   },

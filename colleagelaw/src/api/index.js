@@ -1,11 +1,9 @@
 import axios from 'axios'
-
 export const fetchImg = () => {
   return axios({
     url: 'http://8.138.58.77:8806/gdufe/image/pageImage/1/5000'
   });
 };
-
 
 export const fetchTreeData = (guanliid) => {
   console.log(`http://8.138.58.77:8806/gdufe/tree/pageTree/${guanliid}/1/300`)
@@ -27,17 +25,15 @@ export const addTreeData = (formData) => {
   return axios({
     method: 'post',
     url: 'http://8.138.58.77:8806/gdufe/tree/admin/addTree',
-    data: {...formData}
+    data: { ...formData }
   });
 };
-
-
 
 export const editTreeData = (formData) => {
   return axios({
     method: 'post',
     url: 'http://8.138.58.77:8806/gdufe/tree/admin/editTree',
-    data: {...formData}
+    data: { ...formData }
   });
 };
 
@@ -54,8 +50,6 @@ export const removeMessage = (messageId) => {
     url: `http://8.138.58.77:8806/gdufe/message/admin/removeMessage/${messageId}`,
   });
 };
-
-
 
 export const getList = (dataurl, page, limit) => {
   console.log(`${dataurl}/${page}/${limit}`)
