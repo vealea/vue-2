@@ -15,6 +15,9 @@ import refresh from '../views/refresh.vue'
 Vue.use(Router)
 
 export default new Router({
+
+  mode: 'history',
+   // 加上这一行
   routes: [
     {
       path: '/refresh',
@@ -22,7 +25,8 @@ export default new Router({
       component: refresh
     },
     {
-      path: '',
+      path: '/',
+      redirect: '/login', 
       name: 'wu'
     },
     {
